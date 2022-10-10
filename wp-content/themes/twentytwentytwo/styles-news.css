@@ -1,0 +1,267 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+/* ol,
+ul {
+  list-style: none;
+} */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1180px;
+  /* padding: 0 25px; */
+}
+
+.header {
+  padding-top: 20px;
+}
+.vov {
+  margin-bottom: 40px;
+  background-color: rgb(194, 184, 184);
+}
+.vov__name {
+  display: flex;
+  justify-content: right;
+
+  list-style: none;
+}
+.vov__name li {
+  margin-right: 20px;
+  color: red;
+}
+
+.vov__name li:nth-child(2),
+.vov__name li:nth-child(4),
+.vov__name li:nth-child(6),
+.vov__name li:nth-child(8),
+.vov__name li:nth-child(10),
+.vov__name li:nth-child(12),
+.vov__name li:nth-child(14),
+.vov__name li:nth-child(16) {
+  width: 2px;
+  height: 15px;
+  background-color: rgb(77, 51, 51);
+}
+.infor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infor div {
+  margin-right: 30px;
+}
+.infor__logo img {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+}
+.infor__logoSocial i {
+  margin-right: 20px;
+}
+.infor__logoSocial {
+  display: flex;
+}
+
+.navbar__list li:first-child{
+    margin-right: 10px;
+}
+
+.navbar__list li:last-child{
+    margin-left: -15px;
+}
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+
+  color: aliceblue;
+  font-weight: 900;
+  line-height: 20px;
+  text-align: center;
+  background-color: #185c98;
+}
+.navbar__list li {
+  margin-right: 30px;
+  list-style: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.small {
+  padding: 0 30px;
+}
+.card__main {
+  width: 500px;
+}
+.card__main img {
+  width: 500px;
+  object-fit: contain;
+}
+.card__main .title {
+  padding: 10px 0 10px 0;
+  font-size: 25px;
+  color: #185c98;
+}
+
+
+.nav__list li{
+    padding-top: 10px;
+}
+.nav__list {
+    list-style-type: square;
+  padding-left: 20px;
+}
+.card__small {
+  width: 300px;
+  padding-bottom: 25px;
+}
+.card__small img {
+  width: 300px;
+  object-fit: contain;
+}
+.card__news--content {
+  display: flex;
+  padding-bottom: 25px;
+}
+.card__news--content div {
+  margin-right: 10px;
+}
+.card__news .title {
+    padding-bottom: 10px;
+  font-size: 20px;
+  color: rgb(211, 21, 21);
+}
+.card__news {
+  width: 300px;
+}
+.card__news img {
+  width: 100px;
+  object-fit: contain;
+}
