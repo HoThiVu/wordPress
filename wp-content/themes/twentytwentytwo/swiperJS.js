@@ -1,50 +1,20 @@
-var swiper = new Swiper('.mySwiper', {
-    slidesPerView: 3,
-    centeredSlides: true,
-    spaceBetween: 30,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
   });
-
-  var appendNumber = 4;
-  var prependNumber = 1;
-  document
-    .querySelector('.prepend-2-slides')
-    .addEventListener('click', function (e) {
-      e.preventDefault();
-      swiper.prependSlide([
-        '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-        '<div class="swiper-slide">Slide ' + --prependNumber + '</div>',
-      ]);
-    });
-  document
-    .querySelector('.prepend-slide')
-    .addEventListener('click', function (e) {
-      e.preventDefault();
-      swiper.prependSlide(
-        '<div class="swiper-slide">Slide ' + --prependNumber + '</div>'
-      );
-    });
-  document
-    .querySelector('.append-slide')
-    .addEventListener('click', function (e) {
-      e.preventDefault();
-      swiper.appendSlide(
-        '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>'
-      );
-    });
-  document
-    .querySelector('.append-2-slides')
-    .addEventListener('click', function (e) {
-      e.preventDefault();
-      swiper.appendSlide([
-        '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-        '<div class="swiper-slide">Slide ' + ++appendNumber + '</div>',
-      ]);
-    });
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    focusOnSelect: true
+  });
+ 
+  $('a[data-slide]').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.slider-nav').slick('slickGoTo', slideno - 1);
+  });

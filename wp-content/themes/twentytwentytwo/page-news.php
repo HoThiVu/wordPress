@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div>
-                        <p>Thứ 5, nagy 23 tháng 10 nă 2022</p>
+                        <p>Thứ 5, ngày 23 tháng 10 năm 2022</p>
                 </div>               
                     <div class="infor__logoSocial">
                         <i class="fa-brands fa-facebook"></i>
@@ -49,15 +49,16 @@
                         <i class="fa-brands fa-tiktok"></i>
                         <i class="fa-brands fa-youtube"></i>
                     </div>
-                    <div>
+                    <div class="listening">
                         <p>xem & nghe <i class="fa-solid fa-circle-play"></i></p>
                     </div>
-                    <div>
+                    <div class="languages">
                         <p>English </p>
                     </div>
                    
-                    <form action="">
+                    <form class="formSearch">
                     <input type="text" >
+                    <i class="fa-solid fa-magnifying-glass"></i>
                     </form>
                 </div>
             </div>
@@ -88,9 +89,12 @@
                     </a>
                     <h2 class="title">Chủ nhiệm Ủy ban Pháp luật: Người dân phàn nàn về việc thu hồi sổ hộ khẩu</h2>
                     <ul class="nav__list">
-                        <li>Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</li>
-                        <li>Đã có kết quả giám định ADN 2 bộ hài cốt trong rừng Gia Lai</li>
-                        <li>Vụ 8 tàu cá và ca nô bị cháy tại bến Cửa Đại, có thể do chập điện </li>
+                        <li><i class="fa-solid fa-caret-right"></i> Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</li>
+                        <li><i class="fa-solid fa-caret-right"></i> Đã có kết quả giám định ADN 2 bộ hài cốt trong rừng Gia Lai</li>
+                        <li><i class="fa-solid fa-caret-right"></i> Vụ 8 tàu cá và ca nô bị cháy tại bến Cửa Đại, có thể do chập điện </li>
+                        <li><i class="fa-solid fa-caret-right"></i> Phòng chống tham nhũng: Vai trò của người dân ở đâu?</li>
+                        <li><i class="fa-solid fa-caret-right"></i> Ảnh hưởng vụ nổ trên cầu Crimea đến chiến dịch quân sự của Nga ở Ukraine</li>
+                        <li><i class="fa-solid fa-caret-right"></i> Việt Nam vào top điểm đến được "săn lùng" tại Australia trong 20 năm qua</li>
                     </ul>
             </div>  
             <div class="small">
@@ -117,7 +121,7 @@
             </div>                            
             <div class="card__news">
                     <div>
-                        <h2 class="title">Cập nhật mới nhất</h2>
+                        <h2 class="title">Cập nhật mới nhất <i class="fa-solid fa-caret-right"></i></h2>
                     </div>
                     <div>
                         <div class="card__news--content">
@@ -154,11 +158,13 @@
                 </div>
                 <div>
                  
-                </div>        
+                </div>   
+                
+                 
         </main>
-  
+ 
 </div>
     
 </body>
-
+<!-- <script src="swiper.JS"></script> -->
 </html>

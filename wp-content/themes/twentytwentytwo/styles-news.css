@@ -137,11 +137,12 @@ body {
 }
 
 .header {
-  padding-top: 20px;
+  /* padding-top: 10px; */
 }
 .vov {
-  margin-bottom: 40px;
-  background-color: rgb(194, 184, 184);
+  margin-bottom: 10px;
+  padding: 20px 0;
+  background-color: rgb(236, 234, 234);
 }
 .vov__name {
   display: flex;
@@ -164,7 +165,7 @@ body {
 .vov__name li:nth-child(16) {
   width: 2px;
   height: 15px;
-  background-color: rgb(77, 51, 51);
+  background-color: rgb(204, 189, 189);
 }
 .infor {
   display: flex;
@@ -181,11 +182,49 @@ body {
 }
 .infor__logoSocial i {
   margin-right: 20px;
+  font-size: 40px;
+}
+
+.infor__logoSocial i:nth-child(1){
+    color: rgb(47, 47, 151);
+}
+
+.infor__logoSocial i:nth-child(2){
+color: rgb(151, 63, 63);
+}
+
+.infor__logoSocial i:nth-child(3){
+    color: rgb(11, 11, 17);
+}
+
+.infor__logoSocial i:nth-child(4){
+    color: rgb(241, 12, 12);
 }
 .infor__logoSocial {
   display: flex;
 }
+.listening{
+    color: red;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(218, 224, 230);
+   
+}
+.languages{
+    color: #185c98;
+}
 
+.formSearch input{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.formSearch i{
+    top: 100px;
+    position: absolute;
+    margin-left: -35px;
+}
 .navbar__list li:first-child{
     margin-right: 10px;
 }
@@ -234,9 +273,13 @@ body {
 .nav__list li{
     padding-top: 10px;
 }
+
+.nav__list i{
+    color: rgb(170, 43, 43);
+}
 .nav__list {
-    list-style-type: square;
-  padding-left: 20px;
+    list-style:none;
+  /* padding-left: 10px; */
 }
 .card__small {
   width: 300px;
@@ -265,3 +308,5 @@ body {
   width: 100px;
   object-fit: contain;
 }
+
+/* siles' */
