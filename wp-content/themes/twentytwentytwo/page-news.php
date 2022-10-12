@@ -83,7 +83,7 @@
             </div>
         </div>
         <main class="main">
-            <div class="card__main">
+            <!-- <div class="card__main">
                     <a href="">
                         <img src="https://media2.vov.vn/sites/default/files/styles/front_large/public/2022-10/u.jpg" alt="">
                     </a>
@@ -96,30 +96,15 @@
                         <li><i class="fa-solid fa-caret-right"></i> Ảnh hưởng vụ nổ trên cầu Crimea đến chiến dịch quân sự của Nga ở Ukraine</li>
                         <li><i class="fa-solid fa-caret-right"></i> Việt Nam vào top điểm đến được "săn lùng" tại Australia trong 20 năm qua</li>
                     </ul>
-            </div>  
-            <div>
-                
-            </div>
-            <div class="small">
-                <!-- <div class="card__small">
-                    <a href="">
-                        <img src="https://media.vov.vn/sites/default/files/styles/front_large_watermark/public/2022-10/nga_tu_so_7.jpg" alt="">
-                    </a>
-                    <p class="title">Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</p>                    
-                </div>  
-                
-                <div class="card__small">
-                    <a href="">
-                        <img src="https://media2.vov.vn/sites/default/files/styles/front_large/public/2022-10/kristalina_georgieva.jpg" alt="">
-                    </a>
-                    <p class="title">Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</p>                    
-                </div>  -->
+            </div>   -->
 
-<!-- thuc hien truy van de hien thi -->
+</div>
+
+            <!-- <div class="small">              
                 <?php $getposts = new WP_query();
-                    $getposts->query('post_status=publish&showposts=6'); ?>
+   $getposts->query('post_status=publish&showposts=6'); ?>
                     <?php global $wp_query;
-                    $wp_query->in_the_loop = true; ?>
+   $wp_query->in_the_loop = true; ?>
                     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
                         <div class="card__small">
                             <?php vu_thumbnail("small")?>
@@ -132,9 +117,49 @@
                             </div>
                         </div>
                     <?php endwhile;
-                    wp_reset_postdata(); ?>
-            </div>                            
-            <div class="card__news">
+   wp_reset_postdata(); ?>
+            </div> -->
+            
+            <?php
+$servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "learningwordpress";
+
+   // tạo kết nối
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   // kiểm kết nối
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }
+
+   $sql = "SELECT id, title, imagee FROM t_products";
+   $result = $conn->query($sql);
+
+   if ($result->num_rows > 0) {
+       // Load dữ liệu lên website
+       while($row = $result->fetch_assoc()) {
+           // echo "id: " . $row["id"]. " - Tên: " . $row["title"]. " "
+           // . $row["imagee"]."<br>";
+           // }
+           ?>
+   
+        <div class="card__small">
+        <a href="">
+    <img src="<?php echo $row["imagee"]; ?>">
+    </a>
+        
+            <p class="title"><?php echo $row["title"] ?></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+<?php
+       }
+   } else {
+       echo "0 results";
+   }
+   $conn->close();
+   ?>
+            <!-- <div class="card__news">
                     <div>
                         <h2 class="title">Cập nhật mới nhất <i class="fa-solid fa-caret-right"></i></h2>
                     </div>
@@ -173,12 +198,12 @@
                 </div>
                 <div>
                  
-                </div>   
+            </div>    -->
                 
                  
-        </main>
- 
-</div>
+        
+            </main>
+
     
 </body>
 <!-- <script src="swiper.JS"></script> -->

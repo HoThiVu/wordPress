@@ -81,3 +81,4 @@ if (!function_exists('vu_thumbnail')) {
 	<?php endif;
     }
 }
+
