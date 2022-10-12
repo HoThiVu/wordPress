@@ -308,5 +308,15 @@ color: rgb(151, 63, 63);
   width: 100px;
   object-fit: contain;
 }
+/* .post-thumbnail img{
+  width: 300px;
+  object-fit: contain;
 
+} */
+.card__small div img{
+  height: 200px;
+}
+.card__content{
+  width: 300px;
+}
 /* siles' */

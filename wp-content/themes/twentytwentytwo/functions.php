@@ -65,3 +65,19 @@ add_action( 'wp_enqueue_scripts', 'twentytwentytwo_styles' );
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+// --------------------
+
+if (!function_exists('vu_thumbnail')) {
+    function vu_thumbnail($size)
+    {
+        if(!is_single() && has_post_thumbnail() && ! post_password_required() || has_post_format('image')) : ?>
+	  <a href="<?php the_permalink(); ?>">
+	  <div><?php the_post_thumbnail($size); ?></div>
+	  </a>
+	  <?php else : ?>
+		<a href="<?php the_permalink(); ?>">
+	  <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxddtPSxt3mS3QjGibU-bVEPkoBgh_852nNRuU2_CuZ2sEEJJD9VEcGBZ9OGmlv_LmGdg&usqp=CAU" alt="image empaty"></div>
+	  </a>
+	<?php endif;
+    }
+}

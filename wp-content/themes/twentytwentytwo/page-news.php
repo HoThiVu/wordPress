@@ -97,27 +97,42 @@
                         <li><i class="fa-solid fa-caret-right"></i> Việt Nam vào top điểm đến được "săn lùng" tại Australia trong 20 năm qua</li>
                     </ul>
             </div>  
+            <div>
+                
+            </div>
             <div class="small">
-                <div class="card__small">
+                <!-- <div class="card__small">
                     <a href="">
-                        <img src="https://media2.vov.vn/sites/default/files/styles/front_large/public/2022-10/kristalina_georgieva.jpg" alt="">
+                        <img src="https://media.vov.vn/sites/default/files/styles/front_large_watermark/public/2022-10/nga_tu_so_7.jpg" alt="">
                     </a>
                     <p class="title">Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</p>                    
                 </div>  
-
-                <div class="card__small">
-                    <a href="">
-                        <img src="https://media2.vov.vn/sites/default/files/styles/front_large/public/2022-10/kristalina_georgieva.jpg" alt="">
-                    </a>
-                    <p class="title">Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</p>                    
-                </div> 
                 
                 <div class="card__small">
                     <a href="">
                         <img src="https://media2.vov.vn/sites/default/files/styles/front_large/public/2022-10/kristalina_georgieva.jpg" alt="">
                     </a>
                     <p class="title">Bị cáo Tất Thành Cang tiếp tục hầu tòa trong vụ án bán rẻ đất công</p>                    
-                </div> 
+                </div>  -->
+
+<!-- thuc hien truy van de hien thi -->
+                <?php $getposts = new WP_query();
+                    $getposts->query('post_status=publish&showposts=6'); ?>
+                    <?php global $wp_query;
+                    $wp_query->in_the_loop = true; ?>
+                    <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                        <div class="card__small">
+                            <?php vu_thumbnail("small")?>
+                            <div>
+                                <h3 class="title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h3>
+                                <a><span><?php echo get_the_date('d - m - Y'); ?></span></a>
+                                <a><?php the_author(); ?></a>
+                            </div>
+                        </div>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
             </div>                            
             <div class="card__news">
                     <div>
@@ -127,7 +142,7 @@
                         <div class="card__news--content">
                             <div class="img">                        
                                 <a href="">
-                                    <img src="https://media2.vov.vn/sites/default/files/styles/front_large_watermark/public/2022-10/cl1.jpg" alt="">
+                                    <img src="https://media.vov.vn/sites/default/files/styles/front_large/public/2022-10/u17_indonesia_1.jpeg" alt="">
                                 </a>
                             </div>
                             
@@ -137,7 +152,7 @@
                         <div class="card__news--content">
                         <div class="img">                        
                             <a href="">
-                                <img src="https://media2.vov.vn/sites/default/files/styles/front_large_watermark/public/2022-10/cl1.jpg" alt="">
+                                <img src="https://media.vov.vn/sites/default/files/styles/front_large/public/2022-10/11-10_lanh_dao_tp_trao_quyet_dinh_va_tang_hoa_cac_ca_nhan.jpg" alt="">
                             </a>
                         </div>
                         
